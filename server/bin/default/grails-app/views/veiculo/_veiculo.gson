@@ -1,0 +1,16 @@
+import grails.Veiculo
+
+model {
+    Veiculo veiculo
+}
+
+json {
+    id veiculo.id
+    nome veiculo.nome
+    fabricante nome: veiculo.fabricante.nome
+        id: veiculo.fabricante.id
+    modelo nome: veiculo.modelo.nome
+        id: veiculo.modelo.id
+    condutor nome: veiculo.condutor.nome
+        id: veiculo.condutor.id
+}
